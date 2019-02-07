@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PageController : MonoBehaviour
 {
- 
+
 	[SerializeField]
 	ScenarioView scenarioView;
 

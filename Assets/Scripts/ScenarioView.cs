@@ -16,7 +16,7 @@ public class ScenarioView : MonoBehaviour
 
 	public Button SeparateButton1, SeparateButton2;
 
-    //ボタンにテキストを代入するメソッド
+	//ボタンにテキストを代入するメソッド
 	public void SetButtonText(Dictionary<int, JsonStructure.Item> dictionary, int j)
 	{
 		ButtonNode separateButton1 = SeparateButton1.GetComponent<ButtonNode>();
@@ -41,28 +41,26 @@ public class ScenarioView : MonoBehaviour
 
 	}
 
-
 	public void ChangeButtonActive(Button button)
 	{
 		if (button.gameObject.activeSelf == false)
 		{
 			button.gameObject.SetActive(true);
 		}
-
-		if (button.gameObject.activeSelf == true)
+		else if (button.gameObject.activeSelf == true)
 		{
 			button.gameObject.SetActive(false);
 		}
 	}
-        
+
 	void Start()
 	{
 		ChangeButtonActive(SeparateButton1);
 		ChangeButtonActive(SeparateButton2);
 
 		//GetPageButton.onClick.AddListener(GetComponent<PageController>().NextPage);
-		//SeparateButton1.onClick.AddListener(GetComponent<SeparateButton>().ButtonSelectFirst);
-		//SeparateButton2.onClick.AddListener(GetComponent<SeparateButton>().ButtonSelectSecond);
+		//SeparateButton1.onClick.AddListener(GetComponent<SeparateButton>().SelectFirstButton);
+		//SeparateButton2.onClick.AddListener(GetComponent<SeparateButton>().SelectSecondButton);
 
 	}
 

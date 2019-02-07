@@ -58,5 +58,4 @@ public class MakeData : MonoBehaviour {
 		dictionary = MakeDictionary(items);       //dictionaryを作る
 	}
 
-	void Update () {}
 }
