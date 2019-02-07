@@ -1,0 +1,21 @@
+﻿<Properties StartupConfiguration="{2B2C3CE8-48B6-E716-C0B6-AA8DD582897B}|">
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/JsonStructure.cs">
+    <Files>
+      <File FileName="Assets/Scripts/JsonStructure.cs" Line="1" Column="14" />
+      <File FileName="Assets/Scripts/MakeData.cs" Line="28" Column="30" />
+      <File FileName="Assets/Scripts/PageController.cs" Line="45" Column="4" />
+      <File FileName="Assets/Scripts/SeparateButton.cs" Line="5" Column="2" />
+      <File FileName="Assets/Scripts/ScenarioView.cs" Line="23" Column="37" />
+      <File FileName="Assets/Resources/scenario.txt" Line="144" Column="11" />
+      <File FileName="Assets/Scripts/ButtonNode.cs" Line="1" Column="6" />
+      <File FileName="Assets/Scripts/PageNode.cs" Line="8" Column="2" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
