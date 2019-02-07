@@ -14,8 +14,7 @@ public class ScenarioView : MonoBehaviour
 	[SerializeField]
 	Button GetPageButton;
 
-	[SerializeField]
-	Button SeparateButton1, SeparateButton2;
+	public Button SeparateButton1, SeparateButton2;
 
     //ボタンにテキストを代入するメソッド
 	public void MakeButton(Dictionary<int, JsonStructure.Item> dictionary, int j)
@@ -43,22 +42,21 @@ public class ScenarioView : MonoBehaviour
 	}
 
 
-	public void SetButtonTrue()
+	public void ChangeButtonTrue(Button button)
 	{
-		SeparateButton1.gameObject.SetActive(true);
-		SeparateButton2.gameObject.SetActive(true);
-	}
+		button.gameObject.SetActive(true);
+    }
 
 
-	public void SetButtonFalse()
+	public void ChangeButtonFalse(Button button)
 	{
-		SeparateButton1.gameObject.SetActive(false);
-		SeparateButton2.gameObject.SetActive(false);
+		button.gameObject.SetActive(false);
 	}
-
+    
 	void Start()
 	{
-		SetButtonFalse();
+		ChangeButtonFalse(SeparateButton1);
+		ChangeButtonFalse(SeparateButton2);
 
 		//GetPageButton.onClick.AddListener(GetComponent<PageController>().NextPage);
 		//SeparateButton1.onClick.AddListener(GetComponent<SeparateButton>().ButtonSelectFirst);

@@ -36,7 +36,9 @@ public class PageController : MonoBehaviour
 			//Debug.Log("i:Length=" + i + ":" + dictionary[j].scenario.Length);
 			if (dictionary[j].separate[0].separate_next != 0)       //separate_nextが0でないなら
 			{
-				scenarioView.ButtonSetTrue();
+				scenarioView.ChangeButtonTrue(scenarioView.SeparateButton1);
+				scenarioView.ChangeButtonTrue(scenarioView.SeparateButton2);
+
 				scenarioView.MakeButton(dictionary, j);         //ボタンにテキストを代入
 			}
 		}
