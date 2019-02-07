@@ -15,8 +15,8 @@ public class SeparateButton : MonoBehaviour {
 		makeData.i = 0;
 		Debug.Log(i + ":" + j);
 
-		scenarioView.ChangeButtonFalse(scenarioView.SeparateButton1);
-		scenarioView.ChangeButtonFalse(scenarioView.SeparateButton2);
+		scenarioView.ChangeButtonActive(scenarioView.SeparateButton1);
+		scenarioView.ChangeButtonActive(scenarioView.SeparateButton2);
 	}
 
 	void SelectSecond(Dictionary<int, JsonStructure.Item> dictionary, int i, int j)
@@ -25,8 +25,8 @@ public class SeparateButton : MonoBehaviour {
 		makeData.i = 0;
 		Debug.Log(i + ":" + j);
 
-		scenarioView.ChangeButtonFalse(scenarioView.SeparateButton1);
-		scenarioView.ChangeButtonFalse(scenarioView.SeparateButton2);
+		scenarioView.ChangeButtonActive(scenarioView.SeparateButton1);
+		scenarioView.ChangeButtonActive(scenarioView.SeparateButton2);
 	}
 
 	public void SelectFirstButton()

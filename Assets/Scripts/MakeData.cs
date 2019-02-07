@@ -18,7 +18,7 @@ public class MakeData : MonoBehaviour {
 		return items;
 	}
 
-	Dictionary<int, JsonStructure.Item> MakeDic(List<JsonStructure.Item> items)
+	Dictionary<int, JsonStructure.Item> MakeDictionary(List<JsonStructure.Item> items)
 	{
 
 		Dictionary<int, JsonStructure.Item> dic = new Dictionary<int, JsonStructure.Item>();     //Dictionaryをインスタンス化する
@@ -31,7 +31,7 @@ public class MakeData : MonoBehaviour {
 		return dic;
 	}
 
-	public class JsonHelper
+	class JsonHelper
 	{
 
 		public static List<T> ListFromJson<T>(string json)
@@ -55,7 +55,7 @@ public class MakeData : MonoBehaviour {
 	{
 		List<JsonStructure.Item> items = GetPageInfo();
 
-		dictionary = MakeDic(items);       //dictionaryを作る
+		dictionary = MakeDictionary(items);       //dictionaryを作る
 	}
 
 	void Update () {}
