@@ -56,7 +56,7 @@ public class PageController : MonoBehaviour
 
 	}
 
-	public void NextPage()
+	public void StepNextPage()
 	{
 		ControlPage(makeData.dictionary, makeData.i, makeData.j);
 	}

@@ -43,11 +43,11 @@ public class ScenarioView : MonoBehaviour
 
 	public void ChangeButtonActive(Button button)
 	{
-		if (button.gameObject.activeSelf == false)
+		if (!button.gameObject.activeSelf)
 		{
 			button.gameObject.SetActive(true);
 		}
-		else if (button.gameObject.activeSelf == true)
+		else
 		{
 			button.gameObject.SetActive(false);
 		}
