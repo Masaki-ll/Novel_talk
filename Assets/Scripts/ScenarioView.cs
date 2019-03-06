@@ -11,8 +11,8 @@ public class ScenarioView : MonoBehaviour
 	[SerializeField]
 	GameObject NodePrefab;
 
-	[SerializeField]
-	Button GetPageButton;
+
+	public Button GetPageButton;
 
 	public Button SeparateButton1, SeparateButton2;
 

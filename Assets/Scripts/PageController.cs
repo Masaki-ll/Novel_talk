@@ -10,6 +10,19 @@ public class PageController : MonoBehaviour
 	[SerializeField]
 	MakeData makeData;
 
+
+	void FinishStepPage()
+	{
+		if (makeData.i == makeData.dictionary[makeData.j].scenario.Length - 1)
+		{
+			if (makeData.j == makeData.scenario_id_max - 1)
+			{
+				scenarioView.ChangeButtonActive(scenarioView.GetPageButton);
+			}
+		}
+	}
+
+
 	void ControlPage(Dictionary<int, JsonStructure.Item> dictionary, int i, int j)
 	{
 		Debug.Log(i + ":" + j);
@@ -46,18 +59,19 @@ public class PageController : MonoBehaviour
 
 		if (i == dictionary[j].scenario.Length - 1)
 		{
-			if (dictionary[j].separate[0].separate_next == 0)   //separate_nextが0ならば
+			if (dictionary[j].separate[0].separate_next == 0 && j != makeData.scenario_id_max - 1)   //separate_nextが0ならば
 			{
 				makeData.j = dictionary[j].next;            //nextをjに代入
 				makeData.i = 0;                             //iを初期化
 			}
 		}
 		Debug.Log(i + ":" + j);
-
 	}
 
 	public void StepNextPage()
 	{
 		ControlPage(makeData.dictionary, makeData.i, makeData.j);
+		FinishStepPage();
 	}
+
 }
