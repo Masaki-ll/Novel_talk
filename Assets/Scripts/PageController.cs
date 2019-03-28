@@ -1,15 +1,12 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UniRx;
 
 public class PageController : MonoBehaviour
 {
+	[SerializeField] ScenarioView scenarioView;
 
-	[SerializeField]
-	ScenarioView scenarioView;
-
-	[SerializeField]
-	MakeData makeData;
-
+	[SerializeField] MakeData makeData;
 
 	void FinishStepPage()
 	{
@@ -38,12 +35,6 @@ public class PageController : MonoBehaviour
 			makeData.i++;                                       //ページを１つ進める
 		}
 
-
-		if (i < dictionary[j].scenario.Length)
-		{
-			scenarioView.MakePage(dictionary, i, j);
-		}
-
 		if (i == dictionary[j].scenario.Length - 1)               //iがscenarioの数の最大ならば
 		{
 			//Debug.Log("i:Length=" + i + ":" + dictionary[j].scenario.Length);
@@ -66,12 +57,27 @@ public class PageController : MonoBehaviour
 			}
 		}
 		Debug.Log(i + ":" + j);
+
+		if (i < dictionary[j].scenario.Length)
+		{
+			scenarioView.MakePage(dictionary, i, j);
+		}
 	}
 
 	public void StepNextPage()
 	{
 		ControlPage(makeData.dictionary, makeData.i, makeData.j);
 		FinishStepPage();
+	}
+
+	public void Start(){
+/*
+		scenarioView.GetPageButton.OnClickAsObservable()
+			.Subscribe(_ =>{
+
+			}
+			);
+*/
 	}
 
 }

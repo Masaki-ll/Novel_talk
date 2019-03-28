@@ -6,8 +6,12 @@ public class MakeData : MonoBehaviour {
 
 	public Dictionary<int, JsonStructure.Item> dictionary;
 
-	public int i = 0, j = 1;
+	public int i = 0, j = 0;
 	public int scenario_id_max = 6;
+
+	public int save_scenario_id = 0;
+	public int save_page_number = 0;
+
 
 	List<JsonStructure.Item> GetPageInfo()
 	{
@@ -49,6 +53,8 @@ public class MakeData : MonoBehaviour {
 			public List<T> list;
 		}
 	}
+
+	
     
 
 	void Start()

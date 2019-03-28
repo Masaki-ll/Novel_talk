@@ -1,20 +1,26 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UniRx;
+using UniRx.Triggers;
 
 
 public class ScenarioView : MonoBehaviour
 {
-	[SerializeField]
-	Transform Content;
+	[SerializeField] SaveButtonFunction saveButtonFunction;
+	[SerializeField] Transform Content;
 
-	[SerializeField]
-	GameObject NodePrefab;
+	[SerializeField] GameObject NodePrefab;
 
-
+	public RectTransform MenuPanel;
+	public RectTransform DataPanel;
+	
 	public Button GetPageButton;
-
 	public Button SeparateButton1, SeparateButton2;
+	public Button MenuButton;
+	public Button MenuCloseButton;
+	public Button SaveButton, RoadButton;
+	public Text DataPanelText;
 
 	//ボタンにテキストを代入するメソッド
 	public void SetButtonText(Dictionary<int, JsonStructure.Item> dictionary, int j)
@@ -53,14 +59,26 @@ public class ScenarioView : MonoBehaviour
 		}
 	}
 
+	public void UpdateSaveText(string savetext){
+		DataPanelText.text=savetext;
+	}
+
 	void Start()
 	{
 		ChangeButtonActive(SeparateButton1);
 		ChangeButtonActive(SeparateButton2);
 
+		//DataPanel=GetComponent<ButtonNode>();	//DataPanelの構造をアタッチ
+
 		//GetPageButton.onClick.AddListener(GetComponent<PageController>().NextPage);
 		//SeparateButton1.onClick.AddListener(GetComponent<SeparateButton>().SelectFirstButton);
 		//SeparateButton2.onClick.AddListener(GetComponent<SeparateButton>().SelectSecondButton);
+
+/*
+		this.UpdateAsObservable()
+			.Subscribe(_ => 			//SaveButtonを押してTextが更新された時に画面表示を更新する
+			);
+*/
 
 	}
 

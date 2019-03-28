@@ -51,15 +51,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
+     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
+     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
+     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs" />
+     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
+     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
+     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
      <Compile Include="Assets\Scripts\ButtonNode.cs" />
+     <Compile Include="Assets\Scripts\DataSave.cs" />
      <Compile Include="Assets\Scripts\JsonStructure.cs" />
      <Compile Include="Assets\Scripts\MakeData.cs" />
+     <Compile Include="Assets\Scripts\MenuButtonFunction.cs" />
      <Compile Include="Assets\Scripts\PageController.cs" />
      <Compile Include="Assets\Scripts\PageNode.cs" />
+     <Compile Include="Assets\Scripts\RoadButtonFunction.cs" />
+     <Compile Include="Assets\Scripts\SaveButtonFunction.cs" />
      <Compile Include="Assets\Scripts\ScenarioView.cs" />
      <Compile Include="Assets\Scripts\SeparateButton.cs" />
      <Compile Include="Assets\Scripts\TapEffect.cs" />
      <None Include="Assets\Resources\scenario.txt" />
+     <None Include="Assets\Demigiant\DOTween\readme.txt" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>/Users/masakiinoue/Desktop/unity/Novel_talk/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
@@ -255,6 +267,9 @@
  <Reference Include="UnityEngine.SpatialTracking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
+ <Reference Include="DOTween">
+ <HintPath>/Users/masakiinoue/Desktop/unity/Novel_talk/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Users/masakiinoue/Library/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
  </Reference>
@@ -291,6 +306,14 @@
  <Reference Include="Boo.Lang">
  <HintPath>/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/unity/Boo.Lang.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="UniRx.csproj">
+      <Project>{272C9B9A-E3F7-A9BC-E04F-A3F0478F1C7C}</Project>      <Name>UniRx</Name>    </ProjectReference>
+    <ProjectReference Include="UniRx.Async.csproj">
+      <Project>{A81CFCE1-2605-5B9F-0140-4DD97E2F297E}</Project>      <Name>UniRx.Async</Name>    </ProjectReference>
+    <ProjectReference Include="UniRx.Async.Editor.csproj">
+      <Project>{0778A111-EBDC-C5D0-D8B4-D7832CD78358}</Project>      <Name>UniRx.Async.Editor</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -3,11 +3,9 @@ using UnityEngine;
 
 public class SeparateButton : MonoBehaviour {
 
-	[SerializeField]
-	ScenarioView scenarioView;
+	[SerializeField] ScenarioView scenarioView;
 
-	[SerializeField]
-	MakeData makeData;
+	[SerializeField] MakeData makeData;
 
 	void SelectFirst(Dictionary<int, JsonStructure.Item> dictionary, int i, int j)
 	{
