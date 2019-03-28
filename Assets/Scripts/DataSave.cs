@@ -8,8 +8,6 @@ public class DataSave : MonoBehaviour {
 	[SerializeField]MakeData makeData;
 
 	public string SaveText;
-	public int SavePageChapter;
-	public int SavePageNumber;
 
 	public void SaveData(){
 	//これだと分岐に対応できない	
@@ -22,8 +20,8 @@ public class DataSave : MonoBehaviour {
 		}else{
 */
 			SaveText=makeData.dictionary[makeData.j].scenario[makeData.i].text;
-			SavePageChapter=makeData.j;
-			SavePageNumber=makeData.i;
+			makeData.save_scenario_id=makeData.j;
+			makeData.save_page_number=makeData.i;
 		
 	}
 

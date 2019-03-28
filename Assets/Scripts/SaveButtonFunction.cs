@@ -18,7 +18,6 @@ public class SaveButtonFunction : MonoBehaviour {
 					//scenarioView.DataPanelText.text=makeData.dictionary[makeData.j].scenario[makeData.i].text;
 				}
 			);
-		
 	}
 	
 }

@@ -59,6 +59,7 @@
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
      <Compile Include="Assets\Scripts\ButtonNode.cs" />
+     <Compile Include="Assets\Scripts\DataRoad.cs" />
      <Compile Include="Assets\Scripts\DataSave.cs" />
      <Compile Include="Assets\Scripts\JsonStructure.cs" />
      <Compile Include="Assets\Scripts\MakeData.cs" />
