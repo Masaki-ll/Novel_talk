@@ -203,7 +203,6 @@
 'Assets/Demigiant/DOTween/Modules/DOTweenModuleUnityVersion.cs'
 'Assets/Demigiant/DOTween/Modules/DOTweenModuleUtils.cs'
 'Assets/Scripts/ButtonNode.cs'
-'Assets/Scripts/DataSave.cs'
 'Assets/Scripts/JsonStructure.cs'
 'Assets/Scripts/MakeData.cs'
 'Assets/Scripts/MenuButtonFunction.cs'

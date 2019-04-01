@@ -11,7 +11,7 @@ public class MakeData : MonoBehaviour {
 
 	public int save_scenario_id = 0;
 	public int save_page_number = 0;
-
+	public string SaveText;
 
 	List<JsonStructure.Item> GetPageInfo()
 	{

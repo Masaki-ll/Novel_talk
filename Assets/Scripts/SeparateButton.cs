@@ -37,4 +37,8 @@ public class SeparateButton : MonoBehaviour {
 		SelectSecond(makeData.dictionary, makeData.i, makeData.j);
 	}
 
+	void Start(){
+		
+	}
+
 }

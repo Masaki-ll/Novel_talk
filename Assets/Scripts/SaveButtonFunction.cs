@@ -7,14 +7,32 @@ using UniRx.Triggers;
 public class SaveButtonFunction : MonoBehaviour {
 
 	[SerializeField]ScenarioView scenarioView;
-	[SerializeField]DataSave dataSave;
+
+	[SerializeField]MakeData makeData;
+
+
+	public void SaveData(){
+	//これだと分岐に対応できない	
+/*
+		if(makeData.i==0){
+			int maxnumber=makeData.dictionary[makeData.j-1].scenario.Length-1;
+			SaveText=makeData.dictionary[makeData.j-1].scenario[maxnumber].text;
+			SavePageChapter=makeData.j-1;
+			SavePageNumber=makeData.i;
+		}else{
+*/
+			makeData.SaveText=makeData.dictionary[makeData.j].scenario[makeData.i].text;
+			makeData.save_scenario_id=makeData.j;
+			makeData.save_page_number=makeData.i;
+		
+	}
 
 	void Start () {
 
 		scenarioView.SaveButton.OnClickAsObservable()
 			.Subscribe(_ =>{
-					dataSave.SaveData();
-					scenarioView.UpdateSaveText(dataSave.SaveText);
+					this.SaveData();
+					scenarioView.UpdateSaveText(makeData.SaveText);
 					//scenarioView.DataPanelText.text=makeData.dictionary[makeData.j].scenario[makeData.i].text;
 				}
 			);
