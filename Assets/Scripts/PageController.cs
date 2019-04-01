@@ -71,13 +71,7 @@ public class PageController : MonoBehaviour
 	}
 
 	public void Start(){
-/*
-		scenarioView.GetPageButton.OnClickAsObservable()
-			.Subscribe(_ =>{
-
-			}
-			);
-*/
+		
 	}
 
 }

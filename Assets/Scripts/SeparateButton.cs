@@ -39,6 +39,9 @@ public class SeparateButton : MonoBehaviour {
 
 	void Start(){
 		
+		scenarioView.SeparateButton1.onClick.AddListener(SelectFirstButton);
+		scenarioView.SeparateButton2.onClick.AddListener(SelectSecondButton);
+
 	}
 
 }

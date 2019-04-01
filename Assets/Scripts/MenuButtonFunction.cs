@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UniRx;
 
 public class MenuButtonFunction : MonoBehaviour {
 
@@ -33,6 +34,13 @@ public class MenuButtonFunction : MonoBehaviour {
 				Vector3.zero,
 				0.1f
 		));
+	}
+
+	void Start(){
+		
+		scenarioView.MenuOpenButton.onClick.AddListener(OpenMenu);
+		scenarioView.MenuCloseButton.onClick.AddListener(CloseMenu);
+
 	}
 
 

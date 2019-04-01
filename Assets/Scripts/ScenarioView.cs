@@ -17,7 +17,7 @@ public class ScenarioView : MonoBehaviour
 	
 	public Button GetPageButton;
 	public Button SeparateButton1, SeparateButton2;
-	public Button MenuButton;
+	public Button MenuOpenButton;
 	public Button MenuCloseButton;
 	public Button SaveButton, RoadButton;
 	public Text DataPanelText;
