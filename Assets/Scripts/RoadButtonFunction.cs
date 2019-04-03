@@ -15,12 +15,9 @@ public class RoadButtonFunction : MonoBehaviour {
 	}
 
 	void Start () {
-		scenarioView.RoadButton.OnClickAsObservable()
-			.Subscribe(_ =>{
-					this.RoadData();
-					scenarioView.MakePage(makeData.dictionary,makeData.i,makeData.j);
-				}
-			);
+
+		scenarioView.RoadButton.onClick.AddListener(RoadData);
+		
 	}
 
 }

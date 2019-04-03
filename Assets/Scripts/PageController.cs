@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UniRx;
+using UnityEngine.UI;
 
 public class PageController : MonoBehaviour
 {
@@ -8,13 +9,14 @@ public class PageController : MonoBehaviour
 
 	[SerializeField] MakeData makeData;
 
+
 	void FinishStepPage()
 	{
 		if (makeData.i == makeData.dictionary[makeData.j].scenario.Length - 1)
 		{
 			if (makeData.j == makeData.scenario_id_max - 1)
 			{
-				scenarioView.ChangeButtonActive(scenarioView.GetPageButton);
+				scenarioView.DestroyButton();
 			}
 		}
 	}
@@ -24,15 +26,10 @@ public class PageController : MonoBehaviour
 	{
 		Debug.Log(i + ":" + j);
 
-
+		//
 		if (i == 0 && j == makeData.scenario_id_max)        //シナリオが最後まで行ったら
 		{
-			return;                                             //何もしない
-		}
-
-		if (i < dictionary[j].scenario.Length - 1)
-		{
-			makeData.i++;                                       //ページを１つ進める
+			//return;                                             //何もしない
 		}
 
 		if (i == dictionary[j].scenario.Length - 1)               //iがscenarioの数の最大ならば
@@ -58,19 +55,33 @@ public class PageController : MonoBehaviour
 		}
 		Debug.Log(i + ":" + j);
 
-		if (i < dictionary[j].scenario.Length)
+		if (i < dictionary[j].scenario.Length - 1)
 		{
-			scenarioView.MakePage(dictionary, i, j);
+			makeData.i++;                                       //ページを１つ進める
 		}
+
 	}
+
 
 	public void StepNextPage()
 	{
 		ControlPage(makeData.dictionary, makeData.i, makeData.j);
-		FinishStepPage();
 	}
 
+
 	public void Start(){
+		scenarioView.GetPageButton.onClick.AddListener(StepNextPage);
+
+		scenarioView.NodePrefab.ObserveEveryValueChanged(i => makeData.i)
+			.Subscribe(_ =>{
+				scenarioView.UpdatePage(makeData.dictionary, makeData.i, makeData.j);
+				FinishStepPage();
+			});
+			
+
+		//scenarioView.MakePage(makeData.dictionary, makeData.i, makeData.j);
+		//scenarioView.GetPageButton.ObserveEveryValueChanged
+			
 		
 	}
 

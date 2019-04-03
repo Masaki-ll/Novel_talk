@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using UniRx;
@@ -7,13 +8,12 @@ using UniRx.Triggers;
 
 public class ScenarioView : MonoBehaviour
 {
-	[SerializeField] SaveButtonFunction saveButtonFunction;
-	[SerializeField] Transform Content;
+	//[SerializeField] Transform Content;
 
-	[SerializeField] GameObject NodePrefab;
+	public GameObject NodePrefab;//[SerializeField] GameObject NodePrefab;
 
 	public RectTransform MenuPanel;
-	public RectTransform DataPanel;
+	//public RectTransform DataPanel;
 	
 	public Button GetPageButton;
 	public Button SeparateButton1, SeparateButton2;
@@ -33,18 +33,12 @@ public class ScenarioView : MonoBehaviour
 
 	}
 
-	//ページをインスタンス化して番号に応じたキャラ絵とテキストを代入するメソッド
-	public void MakePage(Dictionary<int, JsonStructure.Item> dictionary, int i, int j)
-	{
-		var node = Instantiate(NodePrefab, Content, false);
-
-		var pageNode = node.GetComponent<PageNode>();
-
+	public void UpdatePage(Dictionary<int, JsonStructure.Item> dictionary, int i, int j){
+		var node = NodePrefab.GetComponent<PageNode>();
+		node.text.text=dictionary[j].scenario[i].text;
+		node.character.texture=Resources.Load(dictionary[j].scenario[i].character) as Texture;
 		Debug.Log(dictionary[j].scenario[i].text);
 		Debug.Log(dictionary[j].scenario[i].character);
-		pageNode.text.text = dictionary[j].scenario[i].text;
-		pageNode.character.texture = Resources.Load(dictionary[j].scenario[i].character) as Texture;
-
 	}
 
 	public void ChangeButtonActive(Button button)
@@ -59,9 +53,14 @@ public class ScenarioView : MonoBehaviour
 		}
 	}
 
+	public void DestroyButton(){
+		GameObject.Destroy(GetPageButton.GetComponent<Button>());
+	}
+
 	public void UpdateSaveText(string savetext){
 		DataPanelText.text=savetext;
 	}
+
 
 	void Start()
 	{

@@ -386,18 +386,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 326307125}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1884052355}
-        m_MethodName: StepNextPage
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &326307125
@@ -729,7 +718,6 @@ GameObject:
   - component: {fileID: 598472096}
   - component: {fileID: 598472095}
   - component: {fileID: 598472094}
-  - component: {fileID: 598472098}
   - component: {fileID: 598472097}
   m_Layer: 5
   m_Name: SeparateButton2
@@ -843,17 +831,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1575358428}
---- !u!114 &598472098
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 598472092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9af84bc9441a471aa9ecdc7da963f5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &640092518
 GameObject:
   m_ObjectHideFlags: 0
@@ -6416,7 +6393,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'aaa
+  m_Text: '
 
 '
 --- !u!222 &1451363633
@@ -6856,11 +6833,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23ec7b6dde4234138a944615a9c27a80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  saveButtonFunction: {fileID: 871529093}
-  Content: {fileID: 1628455716}
   NodePrefab: {fileID: 326307121}
   MenuPanel: {fileID: 1136199306}
-  DataPanel: {fileID: 727645288}
   GetPageButton: {fileID: 326307124}
   SeparateButton1: {fileID: 1912392513}
   SeparateButton2: {fileID: 598472094}
@@ -6935,7 +6909,6 @@ GameObject:
   - component: {fileID: 1912392515}
   - component: {fileID: 1912392514}
   - component: {fileID: 1912392513}
-  - component: {fileID: 1912392517}
   - component: {fileID: 1912392516}
   m_Layer: 5
   m_Name: SeparateButton1
@@ -7049,17 +7022,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 291756468}
---- !u!114 &1912392517
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1912392511}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9af84bc9441a471aa9ecdc7da963f5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1958646473
 GameObject:
   m_ObjectHideFlags: 0
