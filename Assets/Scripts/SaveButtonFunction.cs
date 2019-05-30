@@ -21,9 +21,9 @@ public class SaveButtonFunction : MonoBehaviour {
 			SavePageNumber=makeData.i;
 		}else{
 */
-			makeData.SaveText=makeData.dictionary[makeData.j].scenario[makeData.i].text;
-			makeData.save_scenario_id=makeData.j;
-			makeData.save_page_number=makeData.i;
+			makeData.SaveText=makeData.dictionary[makeData.j.Value].scenario[makeData.i.Value].text;
+			makeData.save_scenario_id=makeData.j.Value;
+			makeData.save_page_number=makeData.i.Value;
 		
 	}
 

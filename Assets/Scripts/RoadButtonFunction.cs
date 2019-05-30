@@ -10,14 +10,14 @@ public class RoadButtonFunction : MonoBehaviour {
 	[SerializeField]MakeData makeData;
 	
 	public void RoadData(){
-		makeData.j=makeData.save_scenario_id;
-		makeData.i=makeData.save_page_number;
+		makeData.j.Value=makeData.save_scenario_id;
+		makeData.i.Value=makeData.save_page_number;
 	}
 
 	void Start () {
 
 		scenarioView.RoadButton.onClick.AddListener(RoadData);
-		
+
 	}
 
 }

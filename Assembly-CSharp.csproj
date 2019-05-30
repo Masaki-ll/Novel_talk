@@ -60,6 +60,7 @@
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
      <Compile Include="Assets\Scripts\ButtonNode.cs" />
      <Compile Include="Assets\Scripts\JsonStructure.cs" />
+     <Compile Include="Assets\Scripts\LogButtonFunction.cs" />
      <Compile Include="Assets\Scripts\MakeData.cs" />
      <Compile Include="Assets\Scripts\MenuButtonFunction.cs" />
      <Compile Include="Assets\Scripts\PageController.cs" />

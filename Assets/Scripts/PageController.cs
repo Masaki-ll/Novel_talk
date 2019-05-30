@@ -12,9 +12,9 @@ public class PageController : MonoBehaviour
 
 	void FinishStepPage()
 	{
-		if (makeData.i == makeData.dictionary[makeData.j].scenario.Length - 1)
+		if (makeData.i.Value == makeData.dictionary[makeData.j.Value].scenario.Length - 1)
 		{
-			if (makeData.j == makeData.scenario_id_max - 1)
+			if (makeData.j.Value == makeData.scenario_id_max - 1)
 			{
 				scenarioView.DestroyButton();
 			}
@@ -49,15 +49,15 @@ public class PageController : MonoBehaviour
 		{
 			if (dictionary[j].separate[0].separate_next == 0 && j != makeData.scenario_id_max - 1)   //separate_nextが0ならば
 			{
-				makeData.j = dictionary[j].next;            //nextをjに代入
-				makeData.i = 0;                             //iを初期化
+				makeData.j.Value = dictionary[j].next;            //nextをjに代入
+				makeData.i.Value = 0;                             //iを初期化
 			}
 		}
 		Debug.Log(i + ":" + j);
 
 		if (i < dictionary[j].scenario.Length - 1)
 		{
-			makeData.i++;                                       //ページを１つ進める
+			makeData.i.Value++;                                       //ページを１つ進める
 		}
 
 	}
@@ -65,16 +65,16 @@ public class PageController : MonoBehaviour
 
 	public void StepNextPage()
 	{
-		ControlPage(makeData.dictionary, makeData.i, makeData.j);
+		ControlPage(makeData.dictionary, makeData.i.Value, makeData.j.Value);
 	}
 
 
 	public void Start(){
 		scenarioView.GetPageButton.onClick.AddListener(StepNextPage);
 
-		scenarioView.NodePrefab.ObserveEveryValueChanged(i => makeData.i)
+		makeData.i
 			.Subscribe(_ =>{
-				scenarioView.UpdatePage(makeData.dictionary, makeData.i, makeData.j);
+				scenarioView.UpdatePage(makeData.dictionary, makeData.i.Value, makeData.j.Value);
 				FinishStepPage();
 			});
 			

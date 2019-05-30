@@ -7,7 +7,7 @@ public class MakeData : MonoBehaviour {
 
 	public Dictionary<int, JsonStructure.Item> dictionary;
 
-	public int i = 0, j = 1;	//iがページ番号,jが章番号
+	public IntReactiveProperty i, j;	//iがページ番号,jが章番号
 	public int scenario_id_max = 6;
 
 	public int save_scenario_id = 0;
@@ -60,6 +60,8 @@ public class MakeData : MonoBehaviour {
 
 	void Awake()
 	{
+		i.Value=0;
+		j.Value=1;
 		List<JsonStructure.Item> items = GetPageInfo();
 		dictionary = MakeDictionary(items);       //dictionaryを作る
 	}
